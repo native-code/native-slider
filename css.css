@@ -1,0 +1,19 @@
+.container{
+    width: 500px;
+    height: 100px;
+    overflow: hidden;
+    position: relative;
+}
+
+.wrapper{
+    height: 100%;
+    width: 500%;
+    position: absolute;
+    transition: left .5s;
+}
+
+.content{
+    width: 500px;
+    height: 100%;
+    float: left;
+}

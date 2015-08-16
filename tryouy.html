@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css.css">
+    <script type="text/javascript" src="event-dispatcher.js"></script>
+    <script type="text/javascript" src="simple-slider.js"></script>
+</head>
+<body>
+
+<div class="container" id="native-slider">
+    <div class="wrapper" >
+        <div class="content" style="background-color: yellowgreen;"></div>
+        <div class="content" style="background-color: red;"></div>
+        <div class="content" style="background-color: green;"></div>
+        <div class="content" style="background-color: lime;"></div>
+        <div class="content" style="background-color: orange"></div>
+    </div>
+</div>
+
+<button onclick="next()">next</button>
+<button onclick="prev()">previous</button>
+<script>
+    var s = document.getElementById("native-slider");
+    var x = new NativeSlider(s,500,100);
+    function next (){x.next()}
+    function prev (){x.previous()}
+
+    s.addEventListener("slided", function (ev) {
+        console.log(ev);
+    });
+
+</script>
+
+</body>
+</html>
